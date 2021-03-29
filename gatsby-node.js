@@ -7,29 +7,21 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   return graphql(`
-    {
-      allMarkdownRemark(limit: 1000) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              tags
-              templateKey
-            }
-          }
-        }
+  {
+    allMarkdownRemark(limit: 1000) {
+      nodes{
+        id
       }
     }
+   }
+
   `).then((result) => {
     if (result.errors) {
       result.errors.forEach((e) => console.error(e.toString()))
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    const posts = []
 
     posts.forEach((edge) => {
       const id = edge.node.id
