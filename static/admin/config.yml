@@ -30,8 +30,8 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
       - {
-          label: Blurbs,
-          name: blurbs,
+          label: "images",
+          name: "Images",
           widget: list,
           fields:
             [
