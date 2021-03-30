@@ -4,12 +4,12 @@ import Layout from "../components/Layout";
 
 const TestPage = ({ data }) => (
   <Layout>
-    <pre>{JSON.stringify(data, null, 4)}</pre>
+    <pre>{JSON.stringify(data, null, 2)}</pre>
   </Layout>
 )
 
 export const query = graphql`
-  {
+    {
     allMarkdownRemark {
       edges {
         node {
@@ -22,7 +22,12 @@ export const query = graphql`
             blurbs {
               text
               image {
-                absolutePath
+                relativePath
+                childImageSharp {
+                  fixed {
+                    src
+                  }
+                }
               }
             }
           }

@@ -15,6 +15,7 @@ const NavbarWrapper = styled.nav`
 `
 
 const NavItem = styled(Link)`
+  color: #444;
   font-size: 12px;
   font-weight: 100;
   margin: 10px;
