@@ -5,7 +5,7 @@ const FooterWrapper = styled.footer`
   display: flex;
   justify-content: center;
   padding: 40px;
-  height: 500px;
+  height: 300px;
   background: #F5F5F5;
 `
 

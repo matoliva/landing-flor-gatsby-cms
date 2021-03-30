@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 
 const HomeWrapper = styled.section`
   display: flex;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   justify-content: center;
   align-items: center;

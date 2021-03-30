@@ -7,6 +7,11 @@ const NavbarWrapper = styled.nav`
   justify-content: space-around;
   align-items: center;
   background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 `
 
 const NavItem = styled(Link)`
