@@ -37,6 +37,7 @@ const Navbar = () => (
     <NavItem to="/">Servicios</NavItem>
     <NavItem to="/">Prensa</NavItem>
     <NavItem to="/">Contacto</NavItem>
+    <NavItem to="/test">Test</NavItem>
   </NavbarWrapper>
 )
 
