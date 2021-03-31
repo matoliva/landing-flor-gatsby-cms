@@ -6,8 +6,9 @@ const FooterWrapper = styled.footer`
   justify-content: center;
   padding: 40px;
   height: 300px;
-  background: #F5F5F5;
-`
+  background: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.primary};
+`;
 
 const Footer = () => (
   <FooterWrapper>

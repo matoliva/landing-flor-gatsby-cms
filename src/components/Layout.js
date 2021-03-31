@@ -1,17 +1,18 @@
 import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import { theme } from '../style/theme'
 
 const GlobalStyles = createGlobalStyle`
   body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    color: #444;
+    color: ${({ theme }) => theme.font};
     box-sizing: border-box;
   }
-`
+`;
 
 const LayoutWrapper = styled.div`
   display: flex;
@@ -24,12 +25,14 @@ const Main = styled.main`
 `
 
 const Layout = ({ children }) => (
-  <LayoutWrapper>
-    <GlobalStyles />
-    <Navbar />
-    <Main>{children}</Main>
-    <Footer />
-  </LayoutWrapper>
-)
+  <ThemeProvider theme={theme}>
+    <LayoutWrapper>
+      <GlobalStyles />
+      <Navbar />
+      <Main>{children}</Main>
+      <Footer />
+    </LayoutWrapper>
+  </ThemeProvider>
+);
 
 export default Layout

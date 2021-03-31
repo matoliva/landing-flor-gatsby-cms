@@ -6,7 +6,7 @@ const NavbarWrapper = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #fff;
+  background-color: ${({theme}) => theme.colors.primary};
   position: fixed;
   width: 100%;
   top: 0;
@@ -15,21 +15,21 @@ const NavbarWrapper = styled.nav`
 `
 
 const NavItem = styled(Link)`
-  color: #444;
-  font-size: 12px;
+  color: ${({ theme }) => theme.font};
+  font-size: ${({ theme }) => theme.size.l};
   font-weight: 100;
   margin: 10px;
   padding: 5px;
   text-decoration: none;
   text-transform: uppercase;
   :visited {
-    color: #444;
+    color: ${({ theme }) => theme.font};
   }
   :hover {
-    color: #fff;
-    background-color: #161616;
+    color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.secondary};
   }
-`
+`;
 
 const Navbar = () => (
   <NavbarWrapper> 
