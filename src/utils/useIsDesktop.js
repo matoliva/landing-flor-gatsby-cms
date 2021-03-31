@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react'
 
 export const useIsDesktop = (desktopSize) => {
-  const [isDesktop, setDesktop] = useState(window.innerWidth >= desktopSize)
+
+  const mobileBreakpoint = 480;
+
+  const [isDesktop, setDesktop] = useState(
+    typeof window !== "undefined" ? window.innerWidth : mobileBreakpoint
+  );
 
   const updateMedia = () => setDesktop(window.innerWidth > desktopSize)
 
