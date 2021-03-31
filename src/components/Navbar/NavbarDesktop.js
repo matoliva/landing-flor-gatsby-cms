@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { v4 as id }from 'uuid'
 
 const NavbarWrapper = styled.nav`
   display: flex;
@@ -15,15 +16,15 @@ const NavbarWrapper = styled.nav`
 `
 
 const NavItem = styled(Link)`
-  color: ${({ theme }) => theme.font};
-  font-size: ${({ theme }) => theme.size.l};
+  color: ${({ theme }) => theme.colors.font};
+  font-size: ${({ theme }) => theme.size.m};
   font-weight: 100;
   margin: 10px;
   padding: 5px;
   text-decoration: none;
   text-transform: uppercase;
   :visited {
-    color: ${({ theme }) => theme.font};
+    color: ${({ theme }) => theme.colors.font};
   }
   :hover {
     color: ${({ theme }) => theme.colors.primary};
@@ -31,15 +32,14 @@ const NavItem = styled(Link)`
   }
 `;
 
-const Navbar = () => (
+const NavbarDesktop = ({ items }) => (
   <NavbarWrapper> 
-    <NavItem to="/">Home</NavItem>
-    <NavItem to="/">Proyectos</NavItem>
-    <NavItem to="/">Servicios</NavItem>
-    <NavItem to="/">Prensa</NavItem>
-    <NavItem to="/">Contacto</NavItem>
-    <NavItem to="/test">Test</NavItem>
+    {items.map(item => (
+      <NavItem to={item.to} key={id()}>
+        {item.label}
+      </NavItem>
+    ))}
   </NavbarWrapper>
 )
 
-export default Navbar;
+export default NavbarDesktop;

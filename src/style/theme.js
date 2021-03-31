@@ -5,16 +5,17 @@ export const theme = {
     font: "#444",
   },
   size: {
-    s: 10,
-    m: 12,
-    l: 14,
-    xl: 16,
+    s: '10px',
+    m: '12px',
+    l: '14px',
+    xl: '16px',
+    xxl: '24px'
   },
   fonts: {},
   breakpoints: {
-    huge: "1440px",
-    large: "1170px",
-    medium: "768px",
-    small: "450px",
+    huge: 1440,
+    large: 1024,
+    medium: 768,
+    small: 450,
   },
 };

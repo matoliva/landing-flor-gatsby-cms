@@ -2,6 +2,32 @@ module.exports = {
   siteMetadata: {
     title: 'Flor Nieto Website',
     description: 'Flor Nieto Interior Design Website',
+    navbarLinks: [
+      {
+        label: 'Home',
+        to: '/'
+      },
+      {
+        label: 'Proyectos',
+        to: '/'
+      },
+      {
+        label: 'Servicios',
+        to: '/'
+      },
+      {
+        label: 'Prensa',
+        to: '/'
+      },
+      {
+        label: 'Contacto',
+        to: '/'
+      },
+      {
+        label: 'Test',
+        to: '/test'
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-styled-components`,
