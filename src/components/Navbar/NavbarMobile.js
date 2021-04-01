@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styled from 'styled-components'
 import Burger from './Burger'
 import { Link } from 'gatsby'
 import { v4 as id }from 'uuid'
+import { useOnClickOutside } from '../../utils/hooks'
 
 const NavbarWrapper = styled.div`
   position: fixed;
@@ -43,17 +44,22 @@ const NavItem = styled(Link)`
   }
 `
 
-const NavbarMobile = ({ items, open, setOpen }) => (
-  <NavbarWrapper>
-    <Burger open={open} setOpen={setOpen} />
-    <Menu open={open}>
-      {items.map(item => (
-        <NavItem to={item.to} onClick={() => setOpen(false)} key={id()}>
-          {item.label}
-        </NavItem>
-      ))}
-    </Menu>
-  </NavbarWrapper>
-)
+const NavbarMobile = ({ items, open, setOpen }) => {
+  const ref = useRef()
+  useOnClickOutside(ref, () => setOpen(false)) // closes mobile navbar when clicking outside
+
+  return (
+    <NavbarWrapper ref={ref}>
+      <Burger open={open} setOpen={setOpen} />
+      <Menu open={open}>
+        {items.map(item => (
+          <NavItem to={item.to} onClick={() => setOpen(false)} key={id()}>
+            {item.label}
+          </NavItem>
+        ))}
+      </Menu>
+    </NavbarWrapper>
+  )
+}
 
 export default NavbarMobile
