@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Flor Nieto Website',
     description: 'Flor Nieto Interior Design Website',
+    author: "southpress",
     navbarLinks: [
       {
         label: 'Home',
