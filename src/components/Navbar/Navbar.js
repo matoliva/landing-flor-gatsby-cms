@@ -3,9 +3,9 @@ import { graphql, useStaticQuery } from 'gatsby'
 import NavbarDesktop from './NavbarDesktop'
 import NavbarMobile from './NavbarMobile'
 import { useIsDesktop } from '../../utils/hooks'
-import { theme } from '../../style/theme'
+import { breakpoints } from '../../style/theme'
 
-const desktopSize = theme.breakpoints.large;
+const desktopSize = breakpoints.large;
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)

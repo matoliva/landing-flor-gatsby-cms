@@ -12,6 +12,18 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.font};
     box-sizing: border-box;
   }
+
+  h1 {
+    @media ${props => props.theme.device.laptop} {
+      font-size: 36px;
+    }
+    @media ${props => props.theme.device.mobileS} {
+      font-size: 20px;
+    }
+    @media ${props => props.theme.device.mobileM} {
+      font-size: 24px;
+    }
+  }
 `;
 
 const LayoutWrapper = styled.div`
