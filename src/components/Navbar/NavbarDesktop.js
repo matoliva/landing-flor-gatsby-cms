@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { v4 as id }from 'uuid'
+import { v4 as id } from 'uuid'
 
 const NavbarWrapper = styled.nav`
   display: flex;

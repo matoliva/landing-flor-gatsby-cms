@@ -7,12 +7,27 @@ import { breakpoints } from "../style/theme";
 const desktopSize = breakpoints.large;
 
 const HeroWrapper = styled.div`
+  position: relative;
   height: 100vh;
   z-index: 0;
 
   .hero-img {
     height: 100%;
   }
+`;
+
+const HeroText = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 250px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 `;
 
 const DesktopImage = () => {
@@ -48,6 +63,10 @@ const Hero = () => {
   return (
     <HeroWrapper>
       <Component />
+      <HeroText>
+        <h1> Florencia Nieto </h1>
+        <h2> Diseño en arquitectura interior </h2>
+      </HeroText>
     </HeroWrapper>
   );
 };
