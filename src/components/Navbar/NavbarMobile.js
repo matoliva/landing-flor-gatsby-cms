@@ -8,6 +8,7 @@ import { useOnClickOutside } from '../../utils/hooks'
 const NavbarWrapper = styled.div`
   position: fixed;
   height: 100vh;
+  z-index: 1000;
 `
 
 const Menu = styled.nav`
