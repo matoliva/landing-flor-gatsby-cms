@@ -7,8 +7,8 @@ import { breakpoints } from "../style/theme";
 const desktopSize = breakpoints.large;
 
 const HeroWrapper = styled.div`
-  position: relative;
-  height: 100vh;
+  //position: relative;
+  height: 85vh;
   z-index: 0;
 
   .hero-img {

@@ -8,8 +8,8 @@ const NavbarWrapper = styled.nav`
   justify-content: space-around;
   align-items: center;
   background-color: ${({theme}) => theme.colors.primary};
-  position: fixed;
   width: 100%;
+  height: 15vh;
   top: 0;
   left: 0;
   z-index: 1000;

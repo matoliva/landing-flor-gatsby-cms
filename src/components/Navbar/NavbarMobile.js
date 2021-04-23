@@ -6,8 +6,9 @@ import { v4 as id }from 'uuid'
 import { useOnClickOutside } from '../../utils/hooks'
 
 const NavbarWrapper = styled.div`
-  position: fixed;
-  height: 100vh;
+  //position: fixed;
+  height: 15vh;
+  width: 100%;
   z-index: 1000;
 `
 
