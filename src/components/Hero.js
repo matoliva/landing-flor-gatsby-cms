@@ -20,7 +20,7 @@ const HeroText = styled.div`
   position: absolute;
   left: 0;
   right: 0;
-  top: 250px;
+  top: 0;
   bottom: 0;
   display: flex;
   flex-direction: column;
