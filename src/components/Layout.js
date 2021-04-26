@@ -1,9 +1,10 @@
 import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
-import Footer from '../components/Footer'
+import { theme } from '../style/theme'
+
 import Navbar from '../components/Navbar/Navbar'
 import Hero from '../components/Hero'
-import { theme } from '../style/theme'
+import Footer from '../components/Footer'
 
 const GlobalStyles = createGlobalStyle`
   body {

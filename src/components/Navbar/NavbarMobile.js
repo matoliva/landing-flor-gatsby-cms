@@ -10,7 +10,14 @@ const NavbarWrapper = styled.div`
   height: 15vh;
   width: 100%;
   z-index: 1000;
-`
+
+  h1 {
+    display: flex;
+    position: absolute;
+    margin-left: 6rem;
+    margin-top: 1.8rem;
+  }
+`;
 
 const Menu = styled.nav`
   display: flex;
@@ -49,6 +56,7 @@ const NavbarMobile = ({ items, open, setOpen }) => {
   return (
     <NavbarWrapper ref={ref}>
       <Burger open={open} setOpen={setOpen} />
+      <h1>Florencia Nieto</h1>
       <Menu open={open}>
         {items.map(item => (
           <NavItem to={item.to} onClick={() => setOpen(false)} key={id()}>
