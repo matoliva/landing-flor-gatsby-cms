@@ -9,7 +9,7 @@ const NavbarWrapper = styled.nav`
   align-items: center;
   background-color: ${({theme}) => theme.colors.primary};
   width: 100%;
-  height: 15vh;
+  height: 50px;
   top: 0;
   left: 0;
   z-index: 1000;

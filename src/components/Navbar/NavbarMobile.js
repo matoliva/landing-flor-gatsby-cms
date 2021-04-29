@@ -6,7 +6,7 @@ import { v4 as id }from 'uuid'
 import { useOnClickOutside } from '../../utils/hooks'
 
 const NavbarWrapper = styled.div`
-  //position: fixed;
+  position: fixed;
   height: 15vh;
   width: 100%;
   z-index: 1000;
@@ -56,7 +56,6 @@ const NavbarMobile = ({ items, open, setOpen }) => {
   return (
     <NavbarWrapper ref={ref}>
       <Burger open={open} setOpen={setOpen} />
-      <h1>Florencia Nieto</h1>
       <Menu open={open}>
         {items.map(item => (
           <NavItem to={item.to} onClick={() => setOpen(false)} key={id()}>

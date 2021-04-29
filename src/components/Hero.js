@@ -7,8 +7,7 @@ import { breakpoints } from "../style/theme";
 const desktopSize = breakpoints.large;
 
 const HeroWrapper = styled.div`
-  //position: relative;
-  height: 85vh;
+  height: 100vh;
   z-index: 0;
 
   .hero-img {
@@ -16,7 +15,7 @@ const HeroWrapper = styled.div`
   }
 `;
 
-const HeroText = styled.div`
+const HeroTitle = styled.div`
   position: absolute;
   left: 0;
   right: 0;
@@ -30,43 +29,64 @@ const HeroText = styled.div`
   color: white;
 `;
 
-const DesktopImage = () => {
-  return (
-    <StaticImage
-      src="../img/hero-desktop.jpg"
-      alt="cover design"
-      placeholder="tracedSVG"
-      layout="constrained"
-      className="hero-img"
-      objectPosition="50% 50%"
-    />
-  );
-};
+const TitleText = styled.h1`
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 50px;
+  font-weight: 100;
+`
 
-const MobileImage = () => {
-  return (
-    <StaticImage
-      src="../img/hero-mobile.jpg"
-      alt="cover design"
-      placeholder="tracedSVG"
-      layout="constrained"
-      className="hero-img"
-      objectPosition="50% 50%"
-    />
-  );
-};
+const SubtitleText = styled.h2`
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 40px;
+  font-weight: 100;
+`
+
+const DesktopImage = () => (
+  <StaticImage
+    src="../img/hero-desktop.jpg"
+    alt="cover design"
+    placeholder="tracedSVG"
+    layout="constrained"
+    className="hero-img"
+    objectPosition="50% 50%"
+  />
+);
+
+const MobileImage = () => (
+  <StaticImage
+    src="../img/textura-blanca.jpg"
+    alt="cover design"
+    placeholder="tracedSVG"
+    layout="constrained"
+    className="hero-img"
+    objectPosition="50% 50%"
+  />
+);
+
+const LogoImg = () => (
+  <StaticImage 
+    src="../img/logo-dorado.png"
+    alt="logo"
+    placeholder="tracedSVG"
+  />
+)
 
 const Hero = () => {
   const isDesktop = useIsDesktop(desktopSize);
   const Component = isDesktop ? DesktopImage : MobileImage;
+  const Content = isDesktop ? (
+    <>
+    <TitleText> Florencia Nieto </TitleText>
+    <SubtitleText> Diseño en arquitectura interior </SubtitleText>
+    </>
+  ) : <LogoImg />
 
   return (
     <HeroWrapper>
       <Component />
-      <HeroText>
-        <h1> Florencia Nieto </h1>
-        <h2> Diseño en arquitectura interior </h2>
-      </HeroText>
+      <HeroTitle>
+        {Content}
+      </HeroTitle>
     </HeroWrapper>
   );
 };

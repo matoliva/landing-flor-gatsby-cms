@@ -1,9 +1,7 @@
 import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { theme } from '../style/theme'
-
 import Navbar from '../components/Navbar/Navbar'
-import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 
 const GlobalStyles = createGlobalStyle`
@@ -44,9 +42,8 @@ const Layout = ({ children }) => (
       <GlobalStyles />
       <Navbar />
       <Main>
-        <Hero />
+        {children}
       </Main>
-
       <Footer />
     </LayoutWrapper>
   </ThemeProvider>
