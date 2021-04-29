@@ -12,6 +12,7 @@ export const theme = {
     primary: "#FFF",
     secondary: "#161616",
     font: "#444",
+    fontLight: "#ccc",
   },
   size: {
     s: '10px',
