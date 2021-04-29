@@ -8,7 +8,7 @@ const TestPage = ({ data }) => (
   </Layout>
 )
 
-export const query = graphql`
+/* export const query = graphql`
     {
     allMarkdownRemark {
       edges {
@@ -35,6 +35,6 @@ export const query = graphql`
       }
     }
   }
-`
+` */
 
 export default TestPage
