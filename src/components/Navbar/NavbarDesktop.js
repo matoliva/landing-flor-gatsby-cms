@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { v4 as id }from 'uuid'
+import { v4 as id } from 'uuid'
 
 const NavbarWrapper = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: ${({theme}) => theme.colors.primary};
-  position: fixed;
   width: 100%;
+  height: 50px;
   top: 0;
   left: 0;
   z-index: 1000;
