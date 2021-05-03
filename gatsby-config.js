@@ -2,6 +2,33 @@ module.exports = {
   siteMetadata: {
     title: 'Flor Nieto Website',
     description: 'Flor Nieto Interior Design Website',
+    author: "southpress",
+    navbarLinks: [
+      {
+        label: 'Home',
+        to: '/'
+      },
+      {
+        label: 'Proyectos',
+        to: '/'
+      },
+      {
+        label: 'Servicios',
+        to: '/'
+      },
+      {
+        label: 'Prensa',
+        to: '/'
+      },
+      {
+        label: 'Contacto',
+        to: '/'
+      },
+      {
+        label: 'Test',
+        to: '/test'
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -28,6 +55,7 @@ module.exports = {
         name: 'images',
       },
     },
+    `gatsby-plugin-image`,
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -63,6 +91,14 @@ module.exports = {
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /icons/ // See below to configure properly
+        }
+      }
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
