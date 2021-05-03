@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
-import { useIsDesktop } from "../utils/hooks";
+import { useWindowSize } from "../utils/hooks";
 import { breakpoints } from "../style/theme";
 
 const desktopSize = breakpoints.large;
@@ -72,9 +72,9 @@ const LogoImg = () => (
 )
 
 const Hero = () => {
-  const isDesktop = useIsDesktop(desktopSize);
-  const Component = isDesktop ? DesktopImage : MobileImage;
-  const Content = isDesktop ? (
+  const { width } = useWindowSize();
+  const Component = width > 500 ? DesktopImage : MobileImage;
+  const Content = width > 500 ? (
     <>
     <TitleText> Florencia Nieto </TitleText>
     <SubtitleText> Diseño en arquitectura interior </SubtitleText>
