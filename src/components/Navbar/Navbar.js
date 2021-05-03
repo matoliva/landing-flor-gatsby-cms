@@ -2,17 +2,17 @@ import React, { useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import NavbarDesktop from './NavbarDesktop'
 import NavbarMobile from './NavbarMobile'
-import { useIsDesktop } from '../../utils/hooks'
+import { useWindowSize } from '../../utils/hooks'
 import { breakpoints } from '../../style/theme'
 
 const desktopSize = breakpoints.large;
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const isDesktop = useIsDesktop(desktopSize)
+  const { width } = useWindowSize();
   const data = useStaticQuery(query)
   const items = data.site.siteMetadata.navbarLinks
-  const Component = isDesktop ? NavbarDesktop : NavbarMobile
+  const Component = width > 500 ? NavbarDesktop : NavbarMobile
 
   return (
     <Component 
