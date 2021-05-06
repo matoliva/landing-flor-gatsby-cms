@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { theme } from '../style/theme'
+import { theme, breakpoints } from '../style/theme'
 import { useWindowSize } from "../utils/hooks";
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer'
@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
   return(<ThemeProvider theme={theme}>
     <LayoutWrapper>
       <GlobalStyles />
-      { width > 500 && <Header />}
+      { width > breakpoints.mobileL && <Header />}
       <Navbar />
       <Main>
         {children}

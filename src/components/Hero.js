@@ -4,8 +4,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import { useWindowSize } from "../utils/hooks";
 import { breakpoints } from "../style/theme";
 
-const desktopSize = breakpoints.large;
-
 const HeroWrapper = styled.div`
   height: 100vh;
   z-index: 0;
@@ -73,8 +71,8 @@ const LogoImg = () => (
 
 const Hero = () => {
   const { width } = useWindowSize();
-  const Component = width > 500 ? DesktopImage : MobileImage;
-  const Content = width > 500 ? (
+  const Component = width > breakpoints.mobileL ? DesktopImage : MobileImage;
+  const Content = width > breakpoints.mobileL ? (
     <>
     <TitleText> Florencia Nieto </TitleText>
     <SubtitleText> Diseño en arquitectura interior </SubtitleText>
