@@ -10,15 +10,15 @@ const HeaderWrapper = styled.header`
     height: 250px;
 
     .header-img {
-        width: 600px;
-        height: 350px;
+        width: 100%;
+        height: 100%;
     }
 `
 
 const Header = () => (
   <HeaderWrapper>
       <StaticImage 
-        src="../img/logo-header-desktop.png"
+        src="../img/logo-header.jpg"
         alt="header logo"
         placeholder="tracedSVG"
         className="header-img"/>
