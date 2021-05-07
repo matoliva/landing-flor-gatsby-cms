@@ -12,9 +12,8 @@ const NavbarWrapper = styled.nav`
   height: 50px;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 999;
 `
-
 const NavItem = styled(Link)`
   color: ${({ theme }) => theme.colors.font};
   font-size: ${({ theme }) => theme.size.m};

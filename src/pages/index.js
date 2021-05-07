@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Hero from '../components/Hero'
+import ProjectsGrid from '../components/ProjectsGrid'
 
 const HomeWrapper = styled.section`
   display: flex;
@@ -18,6 +19,7 @@ const Home = ({ data }) => (
       {/* <h1>{data.site.siteMetadata.title}</h1> */}
       <Hero />
     </HomeWrapper>
+    <ProjectsGrid />
   </Layout>
 );
 
