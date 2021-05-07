@@ -1,8 +1,10 @@
 import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { theme } from '../style/theme'
+import { theme, breakpoints } from '../style/theme'
+import { useWindowSize } from "../utils/hooks";
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -33,20 +35,26 @@ const LayoutWrapper = styled.div`
 `
 
 const Main = styled.main`
+  display: flex;
+  flex-direction: column;
   flex: 1;
+  align-items: center;
 `
 
-const Layout = ({ children }) => (
-  <ThemeProvider theme={theme}>
+const Layout = ({ children }) => {
+  const { width } = useWindowSize();
+
+  return(<ThemeProvider theme={theme}>
     <LayoutWrapper>
       <GlobalStyles />
+      { width > breakpoints.mobileL && <Header />}
       <Navbar />
       <Main>
         {children}
       </Main>
       <Footer />
     </LayoutWrapper>
-  </ThemeProvider>
-);
+  </ThemeProvider>)
+};
 
 export default Layout
