@@ -25,6 +25,10 @@ const HeroTitle = styled.div`
   align-items: center;
   text-align: center;
   color: white;
+
+  @media (max-width: ${breakpoints.mobileL}px) {
+    top: 0;
+  }
 `;
 
 const TitleText = styled.h1`
