@@ -28,11 +28,15 @@ const Form = styled.form`
   width: 70%;
   align-items: center;
   flex-direction: column;
+
+  @media (max-width: ${breakpoints.mobileL}) {
+    width: 100%;
+  }
 `;
 const Input = styled.input`
   width: 80%;
   border: 0;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   background: transparent;
   margin-bottom: 2rem;
   outline: none;
@@ -40,33 +44,33 @@ const Input = styled.input`
 const TextArea = styled.textarea`
   width: 80%;
   border: 0;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   background: transparent;
   margin-bottom: 2rem;
   outline: none;
 `;
 
 const Button = styled.button`
-  width: 150px;
-  height: 70px;
+  width: 100px;
+  height: 40px;
   outline: none;
   cursor: pointer;
   background: white;
   color: black;
   transition: 0.5s;
-  font-size: 24px;
+  font-size: 1rem;
   border-radius: 5px;
   &:hover {
     background: black;
     border: none;
     color: white;
-    font-size: 28px;
+    font-size: 1.2rem;
     transform: scale(1.1);
   }
   
   @media (max-width: ${breakpoints.mobileL}px) {
-    width: 100px;
-    height: 50px;
+    width: 90px;
+    height: 30px;
   }
 
 
