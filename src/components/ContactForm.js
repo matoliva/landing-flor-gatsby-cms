@@ -74,14 +74,14 @@ const Button = styled.button`
 
 const ContactForm = () => (
   <FromWrapper>
-    <Title> Stay in touch </Title>
-    <Form name="Contact Form" method="POST" data-netlify="true">
+    <Title> Contacto </Title>
+    <Form name="Contact Form" method="POST" data-netlify="true" action="/">
       <input type="hidden" name="form-name" value="Contact Form" />
 
-      <Input type="text" name="name" placeholder="Nombre" autocomplete="off" />
-
-      <Input type="email" name="email" placeholder="Email" autocomplete="off" />
-      <TextArea name="mensaje" placeholder="Mensaje" />
+      <Input type="text" name="name" placeholder="Nombre *" autocomplete="off" required/>
+      <Input type="email" name="email" placeholder="Email *" autocomplete="off" required/>
+      <Input type="text" name="phone" placeholder="Telefono" autocomplete="off"/>
+      <TextArea name="mensaje" placeholder="Mensaje *" required/>
 
       <Button type="submit">Enviar</Button>
     </Form>
