@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Hero from '../components/Hero'
 import ProjectsGrid from '../components/ProjectsGrid'
+import ContactForm from "../components/ContactForm";
 
 const HomeWrapper = styled.section`
   display: flex;
@@ -20,6 +21,7 @@ const Home = ({ data }) => (
       <Hero />
     </HomeWrapper>
     <ProjectsGrid />
+    <ContactForm />
   </Layout>
 );
 

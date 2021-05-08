@@ -5,14 +5,12 @@ import NavbarMobile from './NavbarMobile'
 import { useWindowSize } from '../../utils/hooks'
 import { breakpoints } from '../../style/theme'
 
-const desktopSize = breakpoints.large;
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const { width } = useWindowSize();
   const data = useStaticQuery(query)
   const items = data.site.siteMetadata.navbarLinks
-  const Component = width > 500 ? NavbarDesktop : NavbarMobile
+  const Component = width > breakpoints.mobileL ? NavbarDesktop : NavbarMobile
 
   return (
     <Component 

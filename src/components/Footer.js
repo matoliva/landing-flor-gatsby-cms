@@ -57,23 +57,23 @@ const Footer = () => (
       <SocialWrapper>
         <a
           href="https://www.instagram.com/florencianietointeriores"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           <InstagramIcon fill="#ccc" height={25} />
         </a>
-        <a href="https://www.facebook.com/florencianieto8/" target="_blank">
+        <a href="https://www.facebook.com/florencianieto8/" target="_blank" rel="noreferrer">
           <FacebookIcon fill="#ccc" height={25} />
         </a>
         <a
           href="https://www.houzz.com/professionals/interior-designers-and-decorators/florencia-nieto-interiores-pfvwus-pf~1386239010"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           <HouzzIcon fill="#ccc" height={25} />
         </a>
-        <a href="https://www.linkedin.com/in/florencianieto/" target="_blank">
+        <a href="https://www.linkedin.com/in/florencianieto/" target="_blank" rel="noreferrer">
           <LinkedInIcon fill="#ccc" height={25} />
         </a>
-        <a href="mailto:contacto@florencianietointeriores.com" target="_blank">
+        <a href="mailto:contacto@florencianietointeriores.com" target="_blank" rel="noreferrer">
           <EnvelopIcon fill="#ccc" height={25} />
         </a>
       </SocialWrapper>
