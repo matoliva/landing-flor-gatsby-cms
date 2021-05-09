@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { breakpoints } from "../style/theme";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const FromWrapper = styled.section`
   display: flex;
@@ -28,11 +29,15 @@ const Form = styled.form`
   width: 70%;
   align-items: center;
   flex-direction: column;
+
+  @media (max-width: ${breakpoints.mobileL}px) {
+    width: 100%;
+  }
 `;
 const Input = styled.input`
   width: 80%;
   border: 0;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   background: transparent;
   margin-bottom: 2rem;
   outline: none;
@@ -40,33 +45,34 @@ const Input = styled.input`
 const TextArea = styled.textarea`
   width: 80%;
   border: 0;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   background: transparent;
   margin-bottom: 2rem;
   outline: none;
 `;
 
 const Button = styled.button`
-  width: 150px;
-  height: 70px;
+  width: 100px;
+  height: 40px;
   outline: none;
   cursor: pointer;
   background: white;
   color: black;
   transition: 0.5s;
-  font-size: 24px;
+  font-size: 1rem;
   border-radius: 5px;
+  margin-top: 2rem;
   &:hover {
     background: black;
     border: none;
     color: white;
-    font-size: 28px;
+    font-size: 1.2rem;
     transform: scale(1.1);
   }
   
   @media (max-width: ${breakpoints.mobileL}px) {
-    width: 100px;
-    height: 50px;
+    width: 90px;
+    height: 30px;
   }
 
 
@@ -75,13 +81,15 @@ const Button = styled.button`
 const ContactForm = () => (
   <FromWrapper>
     <Title> Contacto </Title>
-    <Form name="Contact Form" method="POST" data-netlify="true" action="/">
+    <Form name="Contact Form" method="POST" data-netlify="true" action="/" data-netlify-recaptcha="true">
       <input type="hidden" name="form-name" value="Contact Form" />
 
       <Input type="text" name="name" placeholder="Nombre *" autocomplete="off" required/>
       <Input type="email" name="email" placeholder="Email *" autocomplete="off" required/>
       <Input type="text" name="phone" placeholder="Telefono" autocomplete="off"/>
       <TextArea name="mensaje" placeholder="Mensaje *" required/>
+      
+      <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} />
 
       <Button type="submit">Enviar</Button>
     </Form>
