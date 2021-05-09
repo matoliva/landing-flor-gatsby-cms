@@ -29,7 +29,7 @@ const Form = styled.form`
   align-items: center;
   flex-direction: column;
 
-  @media (max-width: ${breakpoints.mobileL}) {
+  @media (max-width: ${breakpoints.mobileL}px) {
     width: 100%;
   }
 `;
