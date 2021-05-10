@@ -75,8 +75,8 @@ const LogoImg = () => (
 
 const Hero = () => {
   const { width } = useWindowSize();
-  const Component = width > breakpoints.mobileL ? DesktopImage : MobileImage;
-  const Content = width > breakpoints.mobileL ? (
+  const Component = width > breakpoints.tablet ? DesktopImage : MobileImage;
+  const Content = width > breakpoints.tablet ? (
     <>
     <TitleText> Florencia Nieto </TitleText>
     <SubtitleText> Diseño en arquitectura interior </SubtitleText>

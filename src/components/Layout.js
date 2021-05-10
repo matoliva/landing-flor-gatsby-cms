@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
   return(<ThemeProvider theme={theme}>
     <LayoutWrapper>
       <GlobalStyles />
-      { width > breakpoints.mobileL && <Header />}
+      { width > breakpoints.tablet && <Header />}
       <Navbar />
       <Main>
         {children}
