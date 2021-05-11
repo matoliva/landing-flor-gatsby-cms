@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
-import { useWindowSize } from "../utils/hooks";
+import { useWindowSize, useIsClient } from "../utils/hooks";
 import { breakpoints } from "../style/theme";
 
 const HeroWrapper = styled.div`
@@ -74,6 +74,7 @@ const LogoImg = () => (
 )
 
 const Hero = () => {
+  const { isClient, key } = useIsClient();
   const { width } = useWindowSize();
   const Component = width > breakpoints.mobile ? DesktopImage : MobileImage;
   const Content = width > breakpoints.mobile ? (
@@ -83,8 +84,9 @@ const Hero = () => {
     </>
   ) : <LogoImg />
 
+  if (!isClient) return null;
   return (
-    <HeroWrapper>
+    <HeroWrapper key={key}>
       <Component />
       <HeroTitle>
         {Content}
