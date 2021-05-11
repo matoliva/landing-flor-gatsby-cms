@@ -26,7 +26,7 @@ const HeroTitle = styled.div`
   text-align: center;
   color: white;
 
-  @media (max-width: ${breakpoints.mobileL}px) {
+  @media (max-width: ${breakpoints.mobile}px) {
     top: 0;
   }
 `;
@@ -75,8 +75,8 @@ const LogoImg = () => (
 
 const Hero = () => {
   const { width } = useWindowSize();
-  const Component = width > breakpoints.tablet ? DesktopImage : MobileImage;
-  const Content = width > breakpoints.tablet ? (
+  const Component = width > breakpoints.mobile ? DesktopImage : MobileImage;
+  const Content = width > breakpoints.mobile ? (
     <>
     <TitleText> Florencia Nieto </TitleText>
     <SubtitleText> Diseño en arquitectura interior </SubtitleText>

@@ -10,7 +10,7 @@ const Navbar = () => {
   const { width } = useWindowSize();
   const data = useStaticQuery(query)
   const items = data.site.siteMetadata.navbarLinks
-  const Component = width > breakpoints.tablet ? NavbarDesktop : NavbarMobile
+  const Component = width > breakpoints.mobile ? NavbarDesktop : NavbarMobile
 
   return (
     <Component 

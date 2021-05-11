@@ -1,10 +1,10 @@
 export const breakpoints = {
-  mobileS: '240',
-  mobileM: '375',
-  mobileL: '410',
-  tablet: '768',
-  laptop: '1024',
-  desktop: '1265'
+  mobile: '576',
+  mobileL: '768',
+  tablet: '769',
+  tabletL: '992',
+  desktop: '993',
+  desktopL: '1200'
 }
 
 export const theme = {
@@ -30,12 +30,10 @@ export const theme = {
   }, */
   
   device: {
-    mobileS: /* `(min-width: ${breakpoints.mobileS}) and */ `(min-width: ${breakpoints.mobileS})`,
-    mobileM: /* `(min-width: ${breakpoints.mobileM}) and  */`(min-width: ${breakpoints.mobileM})`,
+    mobile: /* `(min-width: ${breakpoints.mobileM}) and  */`(min-width: ${breakpoints.mobile})`,
     mobileL: /* `(min-width: ${breakpoints.mobileL}) and  */`(min-width: ${breakpoints.mobileL})`,
     tablet: /* `(min-width: ${breakpoints.tablet}) and  */`(min-width: ${breakpoints.tablet})`,
-    laptop: /* `(min-width: ${breakpoints.laptop}) and  */`(min-width: ${breakpoints.laptop})`,
-    laptopL: /* `(min-width: ${breakpoints.laptopL}) and  */`(min-width: ${breakpoints.laptopL})`,
+    tabletL: /* `(min-width: ${breakpoints.tablet}) and  */`(min-width: ${breakpoints.tabletL})`,
     desktop: /* `(min-width: ${breakpoints.desktop}) and  */`(min-width: ${breakpoints.desktop})`,
     desktopL: `(min-width: ${breakpoints.desktopL})`
   }
