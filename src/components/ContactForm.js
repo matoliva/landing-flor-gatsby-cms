@@ -30,7 +30,7 @@ const Form = styled.form`
   align-items: center;
   flex-direction: column;
 
-  @media (max-width: ${breakpoints.mobileL}px) {
+  @media (max-width: ${breakpoints.mobile}px) {
     width: 100%;
   }
 `;
@@ -70,7 +70,7 @@ const Button = styled.button`
     transform: scale(1.1);
   }
   
-  @media (max-width: ${breakpoints.mobileL}px) {
+  @media (max-width: ${breakpoints.mobile}px) {
     width: 90px;
     height: 30px;
   }

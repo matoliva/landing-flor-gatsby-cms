@@ -19,10 +19,10 @@ const GlobalStyles = createGlobalStyle`
     @media ${props => props.theme.device.laptop} {
       font-size: 36px;
     }
-    @media ${props => props.theme.device.mobileS} {
+    @media ${props => props.theme.device.mobile} {
       font-size: 20px;
     }
-    @media ${props => props.theme.device.mobileM} {
+    @media ${props => props.theme.device.mobile} {
       font-size: 24px;
     }
   }
@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
   return(<ThemeProvider theme={theme}>
     <LayoutWrapper>
       <GlobalStyles />
-      { width > breakpoints.tablet && <Header />}
+      { width > breakpoints.mobile && <Header />}
       <Navbar />
       <Main>
         {children}
