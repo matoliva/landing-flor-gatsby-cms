@@ -34,6 +34,7 @@ const Form = styled.form`
     width: 100%;
   }
 `;
+
 const Input = styled.input`
   width: 80%;
   border: 0;
@@ -42,6 +43,7 @@ const Input = styled.input`
   margin-bottom: 2rem;
   outline: none;
 `;
+
 const TextArea = styled.textarea`
   width: 80%;
   border: 0;
@@ -74,8 +76,6 @@ const Button = styled.button`
     width: 90px;
     height: 30px;
   }
-
-
 `;
 
 const ContactForm = () => (
