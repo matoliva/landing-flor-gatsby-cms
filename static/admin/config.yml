@@ -40,4 +40,9 @@ collections:
           widget: "boolean",
           default: false,
         }
-      - { label: "images", name: "Images", widget: Image, allow_multiple: true }
+      - name: imageGallery
+        label: ImageGallery
+        widget: "image"
+        media_library:
+          config:
+            allow_multiple: true
