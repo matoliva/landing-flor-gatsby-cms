@@ -15,6 +15,7 @@ media_library:
   config:
     cloud_name: dgxp6vwij
     api_key: 677255775569822
+    multiple: true
 
 collections:
   - name: "project"
