@@ -40,13 +40,4 @@ collections:
           widget: "boolean",
           default: false,
         }
-      - {
-          label: "images",
-          name: "Images",
-          widget: list,
-          fields:
-            [
-              { label: Image, name: image, widget: image },
-              { label: Text, name: text, widget: text },
-            ],
-        }
+      - { label: "images", name: "Images", widget: Image, allow_multiple: true }
