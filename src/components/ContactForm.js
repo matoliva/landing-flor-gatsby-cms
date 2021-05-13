@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { breakpoints } from "../style/theme";
-import ReCAPTCHA from "react-google-recaptcha";
+//import ReCAPTCHA from "react-google-recaptcha";
 
 const FromWrapper = styled.section`
   display: flex;
@@ -30,10 +30,11 @@ const Form = styled.form`
   align-items: center;
   flex-direction: column;
 
-  @media (max-width: ${breakpoints.mobileL}px) {
+  @media (max-width: ${breakpoints.mobile}px) {
     width: 100%;
   }
 `;
+
 const Input = styled.input`
   width: 80%;
   border: 0;
@@ -42,6 +43,7 @@ const Input = styled.input`
   margin-bottom: 2rem;
   outline: none;
 `;
+
 const TextArea = styled.textarea`
   width: 80%;
   border: 0;
@@ -70,18 +72,16 @@ const Button = styled.button`
     transform: scale(1.1);
   }
   
-  @media (max-width: ${breakpoints.mobileL}px) {
+  @media (max-width: ${breakpoints.mobile}px) {
     width: 90px;
     height: 30px;
   }
-
-
 `;
 
 const ContactForm = () => (
   <FromWrapper>
     <Title> Contacto </Title>
-    <Form name="Contact Form" method="POST" data-netlify="true" action="/" data-netlify-recaptcha="true">
+    <Form name="Contact Form" method="POST" data-netlify="true" action="/" /* data-netlify-recaptcha="true" */>
       <input type="hidden" name="form-name" value="Contact Form" />
 
       <Input type="text" name="name" placeholder="Nombre *" autocomplete="off" required/>
@@ -89,7 +89,7 @@ const ContactForm = () => (
       <Input type="text" name="phone" placeholder="Telefono" autocomplete="off"/>
       <TextArea name="mensaje" placeholder="Mensaje *" required/>
       
-      <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} />
+      {/* <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} /> */}
 
       <Button type="submit">Enviar</Button>
     </Form>

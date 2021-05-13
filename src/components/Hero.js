@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
-import { useWindowSize } from "../utils/hooks";
+import { useWindowSize, useIsClient } from "../utils/hooks";
 import { breakpoints } from "../style/theme";
 
 const HeroWrapper = styled.div`
@@ -26,31 +26,37 @@ const HeroTitle = styled.div`
   text-align: center;
   color: white;
 
-  @media (max-width: ${breakpoints.mobileL}px) {
+  @media (max-width: ${breakpoints.mobile}px) {
     top: 0;
   }
 `;
 
 const TitleText = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
-  font-size: 50px;
+  background-color: rgba(0,0,0,.5);
+  padding: 5px 15px;
+  margin: 5px;
+  font-size: 60px;
   font-weight: 100;
+  letter-spacing: 4px;
 `
 
 const SubtitleText = styled.h2`
   color: ${({ theme }) => theme.colors.primary};
-  font-size: 40px;
+  background-color: rgba(0,0,0,.5);
+  margin: 5px;
+  padding: 5px 15px;
+  font-size: 30px;
   font-weight: 100;
+  letter-spacing: 2px;
 `
 
 const DesktopImage = () => (
   <StaticImage
-    src="../img/hero-desktop.jpg"
+    src="../img/hero-img.jpg"
     alt="cover design"
     placeholder="tracedSVG"
-    layout="constrained"
     className="hero-img"
-    objectPosition="50% 50%"
   />
 );
 
@@ -59,9 +65,7 @@ const MobileImage = () => (
     src="../img/textura-blanca.jpg"
     alt="cover design"
     placeholder="tracedSVG"
-    layout="constrained"
     className="hero-img"
-    objectPosition="50% 50%"
   />
 );
 
@@ -74,17 +78,19 @@ const LogoImg = () => (
 )
 
 const Hero = () => {
+  const { isClient, key } = useIsClient();
   const { width } = useWindowSize();
-  const Component = width > breakpoints.mobileL ? DesktopImage : MobileImage;
-  const Content = width > breakpoints.mobileL ? (
+  const Component = width > breakpoints.mobile ? DesktopImage : MobileImage;
+  const Content = width > breakpoints.mobile ? (
     <>
     <TitleText> Florencia Nieto </TitleText>
     <SubtitleText> Diseño en arquitectura interior </SubtitleText>
     </>
   ) : <LogoImg />
 
+  if (!isClient) return null;
   return (
-    <HeroWrapper>
+    <HeroWrapper key={key}>
       <Component />
       <HeroTitle>
         {Content}

@@ -112,7 +112,7 @@ const ProjectsGrid = () => {
       <Grid>
         {projects.map((project, index) => (
           <ImageWrapper to='/test' index={index} key={id()}>
-            <Image image={project.coverImg} />
+            <Image image={project.coverImg} alt='proyect image'/>
           </ImageWrapper>
         ))}
       </Grid>
