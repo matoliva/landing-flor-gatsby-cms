@@ -10,6 +10,11 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dgxp6vwij
+    api_key: 677255775569822
 
 collections:
   - name: "project"
@@ -29,6 +34,12 @@ collections:
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
+      - {
+          label: "Mostrar en pagina principal",
+          name: "isLanding",
+          widget: "boolean",
+          default: false,
+        }
       - {
           label: "images",
           name: "Images",

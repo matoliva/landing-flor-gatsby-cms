@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { breakpoints } from "../style/theme";
-import ReCAPTCHA from "react-google-recaptcha";
+//import ReCAPTCHA from "react-google-recaptcha";
 
 const FromWrapper = styled.section`
   display: flex;
@@ -81,7 +81,7 @@ const Button = styled.button`
 const ContactForm = () => (
   <FromWrapper>
     <Title> Contacto </Title>
-    <Form name="Contact Form" method="POST" data-netlify="true" action="/" data-netlify-recaptcha="true">
+    <Form name="Contact Form" method="POST" data-netlify="true" action="/" /* data-netlify-recaptcha="true" */>
       <input type="hidden" name="form-name" value="Contact Form" />
 
       <Input type="text" name="name" placeholder="Nombre *" autocomplete="off" required/>
@@ -89,7 +89,7 @@ const ContactForm = () => (
       <Input type="text" name="phone" placeholder="Telefono" autocomplete="off"/>
       <TextArea name="mensaje" placeholder="Mensaje *" required/>
       
-      <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} />
+      {/* <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} /> */}
 
       <Button type="submit">Enviar</Button>
     </Form>
