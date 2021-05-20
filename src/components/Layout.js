@@ -1,12 +1,14 @@
 import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { theme, breakpoints } from '../style/theme'
-import { useWindowSize } from "../utils/hooks";
+import { theme } from '../style/theme'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer'
-import Header from '../components/Header'
 
 const GlobalStyles = createGlobalStyle`
+  html {
+    scroll-behavior: smooth;
+  }
+ 
   body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -41,20 +43,17 @@ const Main = styled.main`
   align-items: center;
 `
 
-const Layout = ({ children }) => {
-  const { width } = useWindowSize();
-
-  return(<ThemeProvider theme={theme}>
+const Layout = ({ children }) => (
+  <ThemeProvider theme={theme}>
     <LayoutWrapper>
       <GlobalStyles />
-      { width > breakpoints.mobile && <Header />}
       <Navbar />
       <Main>
         {children}
       </Main>
       <Footer />
     </LayoutWrapper>
-  </ThemeProvider>)
-};
+  </ThemeProvider>
+);
 
 export default Layout
