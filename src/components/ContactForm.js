@@ -51,10 +51,11 @@ const TextArea = styled.textarea`
   background: transparent;
   margin-bottom: 2rem;
   outline: none;
+  resize: none;
 `;
 
 const Button = styled.button`
-  width: 100px;
+  width: 150px;
   height: 40px;
   outline: none;
   cursor: pointer;
@@ -71,11 +72,6 @@ const Button = styled.button`
     font-size: 1.2rem;
     transform: scale(1.1);
   }
-  
-  @media (max-width: ${breakpoints.mobile}px) {
-    width: 90px;
-    height: 30px;
-  }
 `;
 
 const ContactForm = () => (
@@ -87,7 +83,7 @@ const ContactForm = () => (
       <Input type="text" name="name" placeholder="Nombre *" autocomplete="off" required/>
       <Input type="email" name="email" placeholder="Email *" autocomplete="off" required/>
       <Input type="text" name="phone" placeholder="Telefono" autocomplete="off"/>
-      <TextArea name="mensaje" placeholder="Mensaje *" required/>
+      <TextArea name="mensaje" placeholder="Mensaje *" rows="4" required/>
       
       {/* <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} /> */}
 
