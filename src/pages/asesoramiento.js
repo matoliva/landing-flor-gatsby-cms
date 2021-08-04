@@ -5,57 +5,29 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const ServicesWrapper = styled.section`
   display: flex;
-  /* height: 100vh;*/
-  margin-top: 12rem;
-  width: 80%;
+  height: 100vh;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4rem;
 `;
 
 const DivWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 50vh;
+  width: 50%;
   color: black;
 `;
 
-const Ul = styled.ul`
-  li {
-    margin: 1rem;
-  }
-  li:nth-child(1)::marker {
-    content: '📧 ';
-  }
-
-  li:nth-child(2)::marker {
-    content: '💵 ';
-  }
-
-  li:nth-child(3)::marker {
-    content: '⌨️ ';
-  }
-
-  li:nth-child(4)::marker {
-    content: '🏗️ ';
-  }
-
-  li:nth-child(5)::marker {
-    content: '🏡 ';
-  }
-`
-
-const keyOnHand = () => (
+const advice = () => (
   <Layout>
     <ServicesWrapper>
-      {/* <DivWrapper>
+      <DivWrapper>
         <StaticImage
           src="../img/key.jpg"
           alt="llave en mano"
           placeholder="tracedSVG"
           className="header-img"
         />
-      </DivWrapper> */}
+      </DivWrapper>
       <DivWrapper>
         <h2> Diseño y Decoración Integral con llave en mano </h2>
         <p>
@@ -69,7 +41,7 @@ const keyOnHand = () => (
           disfrutarlos.
         </p>
         <h3> Cómo funciona:</h3>
-        <Ul>
+        <ul>
           <li>
             Escribime a&nbsp;
             <a
@@ -96,10 +68,10 @@ const keyOnHand = () => (
             Me ocupo de todo y te “entrego” la llave de tu casa para que puedas
             disfrutar del gran cambio que se convirtió en realidad.
           </li>
-        </Ul>
+        </ul>
       </DivWrapper>
     </ServicesWrapper>
   </Layout>
 );
 
-export default keyOnHand;
+export default advice;

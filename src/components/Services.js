@@ -115,7 +115,7 @@ export const Services = () => {
             los detalles para que no tengas que preocuparte por nada y puedas
             tener el/los ambientes listos para disfrutarlos.
           </P>
-          <Button to=""> Conocé más </Button>
+          <Button to="llave-en-mano"> Conocé más </Button>
         </Card>
         <Card>
           <OnlineIcon height={50}/>
@@ -130,7 +130,7 @@ export const Services = () => {
             los detalles para que no tengas que preocuparte por nada y puedas
             tener el/los ambientes listos para disfrutarlos.
           </P>
-          <Button to=""> Conocé más </Button>
+          <Button to="proyecto-online"> Conocé más </Button>
         </Card>
         <Card>
           <AdviceIcon height={50}/>
@@ -146,7 +146,7 @@ export const Services = () => {
             los detalles para que no tengas que preocuparte por nada y puedas
             tener el/los ambientes listos para disfrutarlos.
           </P>
-          <Button to="llave-en-mano"> Conocé más </Button>
+          <Button to="advice"> Conocé más </Button>
         </Card>
       </CardWrapper>
     </ServiceWrapper>
