@@ -4,11 +4,17 @@ import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 
 const ServicesWrapper = styled.section`
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   margin-top: 12rem;
   width: 100%;
   margin-bottom: 6rem;
+
+  @media (max-width: 768px) {
+    display: block;
+    margin-top: 0;
+  }
 `;
 
 const ColumnWrapper = styled.div`
@@ -17,6 +23,22 @@ const ColumnWrapper = styled.div`
 
   .service-image {
     height: 37rem;
+
+    @media (max-width: 768px) {
+      height: 20rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
+`;
+
+const ColumnWrapper2 = styled.div`
+  flex: 1;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
   }
 `;
 
@@ -51,8 +73,6 @@ const H2 = styled.h2`
   margin-bottom: 3rem;
 `;
 
-const P = styled.p``;
-
 const keyOnHand = () => (
   <Layout>
     <ServicesWrapper>
@@ -64,7 +84,7 @@ const keyOnHand = () => (
           className="service-image"
         />
       </ColumnWrapper>
-      <ColumnWrapper>
+      <ColumnWrapper2>
         <H2> Diseño y Decoración Integral con llave en mano </H2>
         <p>
           Si quieres tener absolutamente todo resuelto, realizo un anteproyecto
@@ -106,7 +126,7 @@ const keyOnHand = () => (
             disfrutar del gran cambio que se convirtió en realidad.
           </li>
         </Ul>
-      </ColumnWrapper>
+      </ColumnWrapper2>
     </ServicesWrapper>
   </Layout>
 );
