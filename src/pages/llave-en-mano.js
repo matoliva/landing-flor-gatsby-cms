@@ -5,59 +5,67 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const ServicesWrapper = styled.section`
   display: flex;
-  /* height: 100vh;*/
+  justify-content: space-between;
   margin-top: 12rem;
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 4rem;
+  width: 100%;
+  margin-bottom: 6rem;
 `;
 
-const DivWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
+const ColumnWrapper = styled.div`
+  flex: 1;
+  margin-right: 1rem;
+
+  .service-image {
+    height: 37rem;
+  }
 `;
 
 const Ul = styled.ul`
   li {
     margin: 1rem;
+    margin-bottom: 2rem;
   }
   li:nth-child(1)::marker {
-    content: '📧 ';
+    content: "📧 ";
   }
 
   li:nth-child(2)::marker {
-    content: '💵 ';
+    content: "💵 ";
   }
 
   li:nth-child(3)::marker {
-    content: '⌨️ ';
+    content: "⌨️ ";
   }
 
   li:nth-child(4)::marker {
-    content: '🏗️ ';
+    content: "🏗️ ";
   }
 
   li:nth-child(5)::marker {
-    content: '🏡 ';
+    content: "🏡 ";
   }
-`
+`;
+
+const H2 = styled.h2`
+  margin-top: 0;
+  margin-bottom: 3rem;
+`;
+
+const P = styled.p``;
 
 const keyOnHand = () => (
   <Layout>
     <ServicesWrapper>
-      {/* <DivWrapper>
+      <ColumnWrapper>
         <StaticImage
-          src="../img/key.jpg"
-          alt="llave en mano"
+          src="../img/llave-en-mano.jpg"
+          alt="servicio llave en mano"
           placeholder="tracedSVG"
-          className="header-img"
+          className="service-image"
         />
-      </DivWrapper> */}
-      <DivWrapper>
-        <h2> Diseño y Decoración Integral con llave en mano </h2>
+      </ColumnWrapper>
+      <ColumnWrapper>
+        <H2> Diseño y Decoración Integral con llave en mano </H2>
         <p>
           Si quieres tener absolutamente todo resuelto, realizo un anteproyecto
           con la idea general en la cual trabajamos en conjunto ya que es 100%
@@ -68,6 +76,7 @@ const keyOnHand = () => (
           que preocuparte por nada y puedas tener el/los ambientes listos para
           disfrutarlos.
         </p>
+        <br></br>
         <h3> Cómo funciona:</h3>
         <Ul>
           <li>
@@ -97,7 +106,7 @@ const keyOnHand = () => (
             disfrutar del gran cambio que se convirtió en realidad.
           </li>
         </Ul>
-      </DivWrapper>
+      </ColumnWrapper>
     </ServicesWrapper>
   </Layout>
 );
