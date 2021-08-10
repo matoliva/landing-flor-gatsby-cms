@@ -2,46 +2,192 @@ import React from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
+import { breakpoints } from "../style/theme";
 
 const ServicesWrapper = styled.section`
+  box-sizing: border-box;
   display: flex;
-  height: 100vh;
+  justify-content: space-between;
+  margin-top: 12rem;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 6rem;
+
+  @media (max-width: ${breakpoints.mobile}px) {
+    display: block;
+    margin-top: 0;
+  }
 `;
 
-const DivWrapper = styled.div`
-  height: 50vh;
-  width: 50%;
-  color: black;
+const ColumnWrapper = styled.div`
+  flex: 1;
+  margin-right: 1rem;
+
+  .service-image {
+    height: 54rem;
+
+    @media (max-width: ${breakpoints.mobile}px) {
+      height: 20rem;
+    }
+  }
+
+  @media (max-width: ${breakpoints.mobile}px) {
+    margin-right: 0;
+  }
 `;
 
-const advice = () => (
+const ColumnWrapper2 = styled.div`
+  flex: 1;
+
+  @media (max-width: ${breakpoints.mobile}px) {
+    padding: 1rem;
+  }
+`;
+
+const Ul = styled.ul`
+  li {
+    margin: 1rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: ${breakpoints.mobile}px) {
+      overflow-wrap: break-word;
+    }
+  }
+  li:nth-child(1)::marker {
+    content: "📧 ";
+  }
+
+  li:nth-child(2)::marker {
+    content: "👷🏽‍♂️ ";
+  }
+
+  li:nth-child(2) {
+    margin-bottom: 1rem;
+  }
+
+  li:nth-child(4)::marker {
+    content: "💵 ";
+  }
+
+  li:nth-child(5)::marker {
+    content: "🏗️ ";
+  }
+
+  li:nth-child(5) {
+    margin-bottom: 1rem;
+  }
+
+  li:nth-child(6)::marker {
+    content: "🏡 ";
+  }
+`;
+
+const SubUl = styled.ul`
+  li {
+    margin: 0;
+
+    @media (max-width: ${breakpoints.mobile}px) {
+      overflow-wrap: break-word;
+    }
+  }
+  li:last-child {
+    margin-bottom: 2rem;
+  }
+
+  li:nth-child(1)::marker {
+    content: "💬 ";
+  }
+
+  li:nth-child(2)::marker {
+    content: "📸 ";
+  }
+
+  li:nth-child(3)::marker {
+    content: "🗺️ ";
+  }
+
+  li:nth-child(4)::marker {
+    content: "🎞️ ";
+  }
+
+  li:nth-child(2) {
+    margin-bottom: 0;
+  }
+`;
+
+const LastSubUl = styled.ul`
+  li {
+    margin: 0;
+
+    @media (max-width: ${breakpoints.mobile}px) {
+      overflow-wrap: break-word;
+    }
+
+    li:nth-child(1)::marker {
+      content: "🗺️ " !important;
+    }
+
+    li:nth-child(2)::marker {
+      content: "🎞️ ";
+    }
+  }
+
+  li:nth-child(4) {
+    margin-bottom: 0;
+  }
+`;
+
+const H2 = styled.h2`
+  margin-top: 0;
+  margin-bottom: 3rem;
+
+  @media (max-width: ${breakpoints.mobile}px) {
+    margin-top: 2rem;
+    text-align: center;
+  }
+`;
+
+const Advice = () => (
   <Layout>
     <ServicesWrapper>
-      <DivWrapper>
+      <ColumnWrapper>
         <StaticImage
-          src="../img/key.jpg"
-          alt="llave en mano"
+          src="../img/asesoramiento.jpg"
+          alt="servicio asesoramiento"
           placeholder="tracedSVG"
-          className="header-img"
+          className="service-image"
         />
-      </DivWrapper>
-      <DivWrapper>
-        <h2> Diseño y Decoración Integral con llave en mano </h2>
+      </ColumnWrapper>
+      <ColumnWrapper2>
+        <H2> Asesoramiento </H2>
         <p>
-          Si quieres tener absolutamente todo resuelto, realizo un anteproyecto
-          con la idea general en la cual trabajamos en conjunto ya que es 100%
-          personalizado y una vez que tenemos todo definido realizo el proyecto
-          que es la dirección de obra, es llave en mano porque me ocupo de todo,
-          la gestión de compra del mobiliario y accesorios, los gremios que van
-          a hacer el trabajo asignado y todos los detalles para que no tengas
-          que preocuparte por nada y puedas tener el/los ambientes listos para
-          disfrutarlos.
+          Se trata de una reunión presencial o por videollamada en la cual
+          resuelvo todas tus dudas de él/los ambiente que quieras intervenir.
+          Este servicio puede serte útil si: - querés hacer vos misma/o un
+          cambio en tu casa pero no sabés qué te conviene hacer, qué colores
+          usar, si cambiar los muebles que tenés o simplemente hay que cambiar
+          la distribución, etc
         </p>
-        <h3> Cómo funciona:</h3>
+        <br></br>
+        <h3> Obtendrás una idea clara de: </h3>
         <ul>
+          <li>Cuál es la mejor distribución para cada espacio,</li>
+          <li> Qué muebles necesitas agregar, modificar o descartar, </li>
+          <li>
+            Cuál es la paleta de colores ideal para resaltar las sensaciones que
+            quieras transmitir,
+          </li>
+          <li>
+            Cuáles son los objetos y accesorios adecuados para lograr un espacio
+            cohesivo, agradable y funcional
+          </li>
+        </ul>
+        <p>
+          Con estas herramientas, podrás llevar a cabo el nuevo diseño interior
+          de tu casa a tu ritmo y con tu presupuesto
+        </p>
+        <br></br>
+        <h3> Cómo funciona:</h3>
+        <Ul>
           <li>
             Escribime a&nbsp;
             <a
@@ -51,27 +197,31 @@ const advice = () => (
             >
               contacto@florencianietointeriores.com
             </a>
-            &nbsp;y coordinamos una reunión para que me cuentes tus necesidades,
-            presupuesto y gustos
+            &nbsp;y coordinamos una reunión virtual por videollamada para que me
+            cuentes tus necesidades, presupuesto y gustos
           </li>
-          <li>Te paso el presupuesto y si estas de acuerdo avanzamos</li>
+          <li> Necesito de tu parte: </li>
+          <SubUl>
+            <li> que me cuentes qué quieres hacer, modificar o mejorar, </li>
+            <li>fotos y/o vídeos actuales,</li>
+            <li>
+              planos con medidas (con un boceto a mano alzada será suficiente),
+            </li>
+            <li> imágenes de referencia o carpeta de Pinterest (opcional) </li>
+          </SubUl>
+          <li>Te paso el presupuesto y si estás de acuerdo avanzamos</li>
           <li>
-            Realizo un anteproyecto el cual lo vamos trabajando en conjunto
-            mediante varias reuniones para que podamos obtener el resultado
-            deseado
+            Coordinamos la fecha y horario de la videollamada, en la cual te
+            expondré mis propuestas y tras la cual te entregaré:
           </li>
-          <li>
-            Una vez finalizado comenzamos con la etapa del proyecto en donde voy
-            a llevar a cabo todo lo definido en la etapa anterior
-          </li>
-          <li>
-            Me ocupo de todo y te “entrego” la llave de tu casa para que puedas
-            disfrutar del gran cambio que se convirtió en realidad.
-          </li>
-        </ul>
-      </DivWrapper>
+          <LastSubUl>
+            <li> plano informativo a modo de croquis (si aplica), </li>
+            <li> imágenes de referencia de los elementos a incorporar. </li>
+          </LastSubUl>
+        </Ul>
+      </ColumnWrapper2>
     </ServicesWrapper>
   </Layout>
 );
 
-export default advice;
+export default Advice;

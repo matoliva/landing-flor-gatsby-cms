@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from 'gatsby'
-import KeyIcon from '../icons/key-solid.svg';
-import OnlineIcon from '../icons/globe-americas-solid.svg';
-import AdviceIcon from '../icons/people-carry-solid.svg';
-
+import { Link } from "gatsby";
+import KeyIcon from "../icons/key-solid.svg";
+import OnlineIcon from "../icons/globe-americas-solid.svg";
+import AdviceIcon from "../icons/people-carry-solid.svg";
 
 const ServiceWrapper = styled.section`
   display: flex;
@@ -106,47 +105,38 @@ export const Services = () => {
           <KeyIcon height={50} />
           <h3>Diseño y Decoración Integral con llave en mano</h3>
           <P>
-            Si quieres tener absolutamente todo resuelto, realizo un
-            anteproyecto con la idea general en la cual trabajamos en conjunto
-            ya que es 100% personalizado y una vez que tenemos todo definido
-            realizo el proyecto que es la dirección de obra, es llave en mano
-            porque me ocupo de todo, la gestión de compra del mobiliario y
-            accesorios, los gremios que van a hacer el trabajo asignado y todos
-            los detalles para que no tengas que preocuparte por nada y puedas
-            tener el/los ambientes listos para disfrutarlos.
+            ¡Me encargo de que absolutamente <strong>TODO</strong> quede
+            resuelto! Vos solo tenés que contarme tus necesidades, gustos y cuál
+            es tu presupuesto. Yo voy a coordinar los gremios, comprar el
+            mobiliario o los accesorios que hagan falta y culminar el trabajo,
+            para que vos disfrutes de tu hogar y vivas el cambio que hicimos
+            realidad.
           </P>
           <Button to="llave-en-mano"> Conocé más </Button>
         </Card>
         <Card>
-          <OnlineIcon height={50}/>
+          <OnlineIcon height={50} />
           <h3>Proyectos online (o presencial)</h3>
           <P>
-            Si quieres tener absolutamente todo resuelto, realizo un
-            anteproyecto con la idea general en la cual trabajamos en conjunto
-            ya que es 100% personalizado y una vez que tenemos todo definido
-            realizo el proyecto que es la dirección de obra, es llave en mano
-            porque me ocupo de todo, la gestión de compra del mobiliario y
-            accesorios, los gremios que van a hacer el trabajo asignado y todos
-            los detalles para que no tengas que preocuparte por nada y puedas
-            tener el/los ambientes listos para disfrutarlos.
+            ¡Mayor comodidad y dinamismo! Diseño uno o varios ambientes de tu
+            casa a distancia. Te voy a brindar las herramientas necesarias para
+            que puedas ejecutar el diseño a tu ritmo y tengas el hogar que
+            siempre soñaste.
           </P>
           <Button to="proyecto-online"> Conocé más </Button>
         </Card>
         <Card>
-          <AdviceIcon height={50}/>
+          <AdviceIcon height={50} />
           <h3>Asesoramiento</h3>
           <br></br>
           <P>
-            Si quieres tener absolutamente todo resuelto, realizo un
-            anteproyecto con la idea general en la cual trabajamos en conjunto
-            ya que es 100% personalizado y una vez que tenemos todo definido
-            realizo el proyecto que es la dirección de obra, es llave en mano
-            porque me ocupo de todo, la gestión de compra del mobiliario y
-            accesorios, los gremios que van a hacer el trabajo asignado y todos
-            los detalles para que no tengas que preocuparte por nada y puedas
-            tener el/los ambientes listos para disfrutarlos.
+            Si querés hacer un cambio en tu hogar, pero no sabés por dónde
+            empezar ¡Este servicio es ideal para vos! Es muy sencillo: voy a
+            resolver todas tus dudas con respecto al/los ambiente/s que querés
+            intervenir y juntos vamos a definir qué es lo que te conviene
+            realizar para optimizar tus ideas y potenciar tu presupuesto.
           </P>
-          <Button to="advice"> Conocé más </Button>
+          <Button to="asesoramiento"> Conocé más </Button>
         </Card>
       </CardWrapper>
     </ServiceWrapper>

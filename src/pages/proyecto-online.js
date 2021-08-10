@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
+import { breakpoints } from "../style/theme";
 
 const ServicesWrapper = styled.section`
   box-sizing: border-box;
@@ -11,7 +12,7 @@ const ServicesWrapper = styled.section`
   width: 100%;
   margin-bottom: 6rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${breakpoints.mobile}px) {
     display: block;
     margin-top: 0;
   }
@@ -24,12 +25,12 @@ const ColumnWrapper = styled.div`
   .service-image {
     height: 54rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${breakpoints.mobile}px) {
       height: 20rem;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${breakpoints.mobile}px) {
     margin-right: 0;
   }
 `;
@@ -37,7 +38,7 @@ const ColumnWrapper = styled.div`
 const ColumnWrapper2 = styled.div`
   flex: 1;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${breakpoints.mobile}px) {
     padding: 1rem;
   }
 `;
@@ -46,6 +47,10 @@ const Ul = styled.ul`
   li {
     margin: 1rem;
     margin-bottom: 2rem;
+
+    @media (max-width: ${breakpoints.mobile}px) {
+      overflow-wrap: break-word;
+    }
   }
   li:nth-child(1)::marker {
     content: "📧 ";
@@ -87,6 +92,11 @@ const Ul = styled.ul`
 const SubUl = styled.ul`
   li {
     margin: 0;
+
+    @media (max-width: ${breakpoints.mobile}px) {
+      overflow-wrap: break-word;
+    }
+
   }
   li:last-child {
     margin-bottom: 2rem;
@@ -113,8 +123,9 @@ const H2 = styled.h2`
   margin-top: 0;
   margin-bottom: 3rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${breakpoints.mobile}px) {
     margin-top: 2rem;
+    text-align: center;
   }
 `;
 
@@ -130,7 +141,7 @@ const OnlineProject = () => (
         />
       </ColumnWrapper>
       <ColumnWrapper2>
-        <H2> Proyectos online (o presencial) </H2>
+        <H2> Proyectos online o presencial </H2>
         <p>
           Se trata de proyectos 100% personalizados Diseño uno o varios
           ambientes de tu casa a distancia, sin necesidad de reunirnos
