@@ -121,14 +121,14 @@ const LastSubUl = styled.ul`
     @media (max-width: ${breakpoints.mobile}px) {
       overflow-wrap: break-word;
     }
+  }
 
-    li:nth-child(1)::marker {
-      content: "🗺️ " !important;
-    }
+  li:nth-child(1)::marker {
+    content: "🗺️ " !important;
+  }
 
-    li:nth-child(2)::marker {
-      content: "🎞️ ";
-    }
+  li:nth-child(2)::marker {
+    content: "🎞️ ";
   }
 
   li:nth-child(4) {

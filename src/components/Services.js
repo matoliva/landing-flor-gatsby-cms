@@ -16,7 +16,7 @@ const ServiceWrapper = styled.section`
 const Card = styled.article`
   display: flex;
   flex-direction: column;
-  //justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 20%;
   padding: 2rem;
@@ -26,6 +26,10 @@ const Card = styled.article`
   h3,
   p {
     text-align: center;
+  }
+
+  p {
+    line-height: 1.8;
   }
 
   h3 {
@@ -67,10 +71,11 @@ const P = styled.p`
 const CardWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: stretch;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -96,7 +101,7 @@ const Button = styled(Link)`
 
 export const Services = () => {
   return (
-    <ServiceWrapper>
+    <ServiceWrapper id="services">
       <TitleWrapper>
         <Title> Servicios </Title>
       </TitleWrapper>

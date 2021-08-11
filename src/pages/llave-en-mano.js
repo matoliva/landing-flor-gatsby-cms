@@ -1,8 +1,31 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { breakpoints } from "../style/theme";
+
+const Button = styled(Link)`
+  height: 40px;
+  outline: none;
+  cursor: pointer;
+  background: white;
+  color: black;
+  transition: 0.5s;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 2rem;
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+
+  &:hover {
+    background: black;
+    color: white;
+  }
+`;
 
 const ServicesWrapper = styled.section`
   box-sizing: border-box;
@@ -23,8 +46,7 @@ const ColumnWrapper = styled.div`
   margin-right: 1rem;
 
   .service-image {
-    height: 37rem;
-
+    
     @media (max-width: ${breakpoints.mobile}px) {
       height: 20rem;
     }
@@ -36,10 +58,23 @@ const ColumnWrapper = styled.div`
 `;
 
 const ColumnWrapper2 = styled.div`
+  display: flex;
+  flex-direction: column;
   flex: 1;
+  padding: 0 2rem;
+  justify-content: space-between;
+
+  p, li {
+    line-height: 1.5;
+  }
 
   @media (max-width: ${breakpoints.mobile}px) {
+    margin: 2rem 0;
     padding: 1rem;
+  }
+
+  ${Button} {
+    align-self: center;
   }
 `;
 
@@ -81,6 +116,8 @@ const H2 = styled.h2`
     text-align: center;
   }
 `;
+
+
 
 const keyOnHand = () => (
   <Layout>
@@ -135,6 +172,7 @@ const keyOnHand = () => (
             disfrutar del gran cambio que se convirtió en realidad.
           </li>
         </Ul>
+        <Button to="/#contact-form">Contratame</Button>
       </ColumnWrapper2>
     </ServicesWrapper>
   </Layout>

@@ -10,11 +10,11 @@ module.exports = {
       },
       {
         label: 'Proyectos',
-        to: '/'
+        to: '#proyects'
       },
       {
         label: 'Servicios',
-        to: '/'
+        to: '#services'
       },
       {
         label: 'Prensa',
@@ -22,7 +22,7 @@ module.exports = {
       },
       {
         label: 'Contacto',
-        to: '/'
+        to: '/home#contact-form'
       },
       {
         label: 'Test',
