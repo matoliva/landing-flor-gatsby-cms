@@ -55,7 +55,6 @@ const TextArea = styled.textarea`
 `;
 
 const Button = styled.button`
-  width: 150px;
   height: 40px;
   outline: none;
   cursor: pointer;
@@ -65,17 +64,20 @@ const Button = styled.button`
   font-size: 1rem;
   border-radius: 5px;
   margin-top: 2rem;
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+
   &:hover {
     background: black;
-    border: none;
     color: white;
-    font-size: 1.2rem;
-    transform: scale(1.1);
   }
 `;
 
 const ContactForm = () => (
-  <FromWrapper>
+  <FromWrapper id="contact-form">
     <Title> Contacto </Title>
     <Form name="Contact Form" method="POST" data-netlify="true" action="/" /* data-netlify-recaptcha="true" */>
       <input type="hidden" name="form-name" value="Contact Form" />

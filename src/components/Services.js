@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
+import KeyIcon from "../icons/key-solid.svg";
+import OnlineIcon from "../icons/globe-americas-solid.svg";
+import AdviceIcon from "../icons/people-carry-solid.svg";
 
 const ServiceWrapper = styled.section`
   display: flex;
@@ -13,21 +16,24 @@ const ServiceWrapper = styled.section`
 const Card = styled.article`
   display: flex;
   flex-direction: column;
-  //justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 20%;
   padding: 2rem;
   background-color: white;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
 
-  .card-image {
-    width: 100px;
-    height: 100px;
-  }
-
   h3,
   p {
     text-align: center;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  h3 {
+    margin-top: 2rem;
   }
 
   @media (max-width: 768px) {
@@ -65,15 +71,15 @@ const P = styled.p`
 const CardWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: stretch;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
-const Button = styled.button`
-  width: 150px;
+const Button = styled(Link)`
   height: 40px;
   outline: none;
   cursor: pointer;
@@ -83,81 +89,61 @@ const Button = styled.button`
   font-size: 1rem;
   border-radius: 5px;
   margin-top: 2rem;
+  border: 1px solid black;
+  padding: 1.5rem 1rem 0rem 1rem;
+  text-decoration: none;
+
   &:hover {
     background: black;
-    border: none;
     color: white;
-    font-size: 1.2rem;
-    transform: scale(1.1);
   }
 `;
 
 export const Services = () => {
   return (
-    <ServiceWrapper>
+    <ServiceWrapper id="services">
       <TitleWrapper>
         <Title> Servicios </Title>
       </TitleWrapper>
       <CardWrapper>
         <Card>
-          <StaticImage
-            src="../img/llave-en-mano.png"
-            alt="llave en mano logo"
-            placeholder="tracedSVG"
-            className="card-image"
-          />
+          <KeyIcon height={50} />
           <h3>Diseño y Decoración Integral con llave en mano</h3>
           <P>
-            Si quieres tener absolutamente todo resuelto, realizo un
-            anteproyecto con la idea general en la cual trabajamos en conjunto
-            ya que es 100% personalizado y una vez que tenemos todo definido
-            realizo el proyecto que es la dirección de obra, es llave en mano
-            porque me ocupo de todo, la gestión de compra del mobiliario y
-            accesorios, los gremios que van a hacer el trabajo asignado y todos
-            los detalles para que no tengas que preocuparte por nada y puedas
-            tener el/los ambientes listos para disfrutarlos.
+            ¡Me encargo de que absolutamente <strong>TODO</strong> quede
+            resuelto! Vos solo tenés que contarme tus necesidades, gustos y cuál
+            es tu presupuesto. Yo voy a coordinar los gremios, comprar el
+            mobiliario o los accesorios que hagan falta y culminar el trabajo,
+            para que vos disfrutes de tu hogar y vivas el cambio que hicimos
+            realidad.
           </P>
+          <Button to="llave-en-mano"> Conocé más </Button>
         </Card>
         <Card>
-          <StaticImage
-            src="../img/llave-en-mano.png"
-            alt="llave en mano logo"
-            placeholder="tracedSVG"
-            className="card-image"
-          />
-          <h3>Diseño y Decoración Integral con llave en mano</h3>
+          <OnlineIcon height={50} />
+          <h3>Proyectos online (o presencial)</h3>
           <P>
-            Si quieres tener absolutamente todo resuelto, realizo un
-            anteproyecto con la idea general en la cual trabajamos en conjunto
-            ya que es 100% personalizado y una vez que tenemos todo definido
-            realizo el proyecto que es la dirección de obra, es llave en mano
-            porque me ocupo de todo, la gestión de compra del mobiliario y
-            accesorios, los gremios que van a hacer el trabajo asignado y todos
-            los detalles para que no tengas que preocuparte por nada y puedas
-            tener el/los ambientes listos para disfrutarlos.
+            ¡Mayor comodidad y dinamismo! Diseño uno o varios ambientes de tu
+            casa a distancia. Te voy a brindar las herramientas necesarias para
+            que puedas ejecutar el diseño a tu ritmo y tengas el hogar que
+            siempre soñaste.
           </P>
+          <Button to="proyecto-online"> Conocé más </Button>
         </Card>
         <Card>
-          <StaticImage
-            src="../img/llave-en-mano.png"
-            alt="llave en mano logo"
-            placeholder="tracedSVG"
-            className="card-image"
-          />
-          <h3>Diseño y Decoración Integral con llave en mano</h3>
+          <AdviceIcon height={50} />
+          <h3>Asesoramiento</h3>
+          <br></br>
           <P>
-            Si quieres tener absolutamente todo resuelto, realizo un
-            anteproyecto con la idea general en la cual trabajamos en conjunto
-            ya que es 100% personalizado y una vez que tenemos todo definido
-            realizo el proyecto que es la dirección de obra, es llave en mano
-            porque me ocupo de todo, la gestión de compra del mobiliario y
-            accesorios, los gremios que van a hacer el trabajo asignado y todos
-            los detalles para que no tengas que preocuparte por nada y puedas
-            tener el/los ambientes listos para disfrutarlos.
+            Si querés hacer un cambio en tu hogar, pero no sabés por dónde
+            empezar ¡Este servicio es ideal para vos! Es muy sencillo: voy a
+            resolver todas tus dudas con respecto al/los ambiente/s que querés
+            intervenir y juntos vamos a definir qué es lo que te conviene
+            realizar para optimizar tus ideas y potenciar tu presupuesto.
           </P>
+          <Button to="asesoramiento"> Conocé más </Button>
         </Card>
       </CardWrapper>
-      <Button> Conocé más</Button>
     </ServiceWrapper>
   );
 };
