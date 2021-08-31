@@ -14,7 +14,7 @@ const Button = styled(Link)`
   transition: 0.5s;
   font-size: 1rem;
   border-radius: 5px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   border: 1px solid black;
   padding: 1rem 2rem;
   text-decoration: none;
@@ -31,6 +31,7 @@ const ServicesWrapper = styled.section`
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  padding: 2rem;
   margin-top: 12rem;
   width: 100%;
   margin-bottom: 6rem;
@@ -38,6 +39,8 @@ const ServicesWrapper = styled.section`
   @media (max-width: ${breakpoints.mobile}px) {
     display: block;
     margin-top: 0;
+    padding: 0;
+    margin-bottom: 0;
   }
 `;
 
@@ -81,7 +84,7 @@ const ColumnWrapper2 = styled.div`
 const Ul = styled.ul`
   li {
     margin: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     @media (max-width: ${breakpoints.mobile}px) {
       overflow-wrap: break-word;
@@ -110,12 +113,16 @@ const Ul = styled.ul`
 
 const H2 = styled.h2`
   margin-top: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 
   @media (max-width: ${breakpoints.mobile}px) {
     text-align: center;
   }
 `;
+
+const H3 = styled.h3`
+  margin-bottom: 0;
+`
 
 
 
@@ -142,8 +149,7 @@ const keyOnHand = () => (
           que preocuparte por nada y puedas tener el/los ambientes listos para
           disfrutarlos.
         </p>
-        <br></br>
-        <h3> Cómo funciona:</h3>
+        <H3> Cómo funciona:</H3>
         <Ul>
           <li>
             Escribime a&nbsp;

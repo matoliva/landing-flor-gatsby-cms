@@ -14,7 +14,7 @@ const Button = styled(Link)`
   transition: 0.5s;
   font-size: 1rem;
   border-radius: 5px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   border: 1px solid black;
   padding: 1rem 2rem;
   text-decoration: none;
@@ -31,6 +31,7 @@ const ServicesWrapper = styled.section`
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  padding: 2rem;
   margin-top: 12rem;
   width: 100%;
   margin-bottom: 6rem;
@@ -38,6 +39,8 @@ const ServicesWrapper = styled.section`
   @media (max-width: ${breakpoints.mobile}px) {
     display: block;
     margin-top: 0;
+    padding: 0;
+    margin-bottom: 0;
   }
 `;
 
@@ -46,7 +49,7 @@ const ColumnWrapper = styled.div`
   margin-right: 1rem;
 
   .service-image {
-    //height: 54rem;
+    height: 67rem;
 
     @media (max-width: ${breakpoints.mobile}px) {
       height: 20rem;
@@ -65,7 +68,8 @@ const ColumnWrapper2 = styled.div`
   padding: 0 2rem;
   justify-content: space-between;
 
-  p, li {
+  p,
+  li {
     line-height: 1.5;
   }
 
@@ -82,7 +86,7 @@ const ColumnWrapper2 = styled.div`
 const Ul = styled.ul`
   li {
     margin: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     @media (max-width: ${breakpoints.mobile}px) {
       overflow-wrap: break-word;
@@ -120,7 +124,6 @@ const SubUl = styled.ul`
     @media (max-width: ${breakpoints.mobile}px) {
       overflow-wrap: break-word;
     }
-
   }
   li:last-child {
     margin-bottom: 2rem;
@@ -153,6 +156,14 @@ const H2 = styled.h2`
   }
 `;
 
+const H3 = styled.h3`
+  margin-bottom: 0;
+`;
+
+const P = styled.p`
+  margin-bottom: 0;
+`
+
 const OnlineProject = () => (
   <Layout>
     <ServicesWrapper>
@@ -173,9 +184,8 @@ const OnlineProject = () => (
           un catálogo con los productos que necesitás para que puedas ejecutarlo
           a tu ritmo
         </p>
-        <br></br>
-        <h3> Qué recibirás: </h3>
-        <p> Planos 2D con distribución del mobiliario </p>
+        <H3> Qué recibirás: </H3>
+        <P> Planos 2D con distribución del mobiliario </P>
         <ul>
           <li>
             Moodboard con paleta de colores, materialidad e imágenes de
