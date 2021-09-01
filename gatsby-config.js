@@ -18,7 +18,7 @@ module.exports = {
       },
       {
         label: 'Prensa',
-        to: '/'
+        to: '/prensa'
       },
       {
         label: 'Contacto',
