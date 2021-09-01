@@ -68,7 +68,8 @@ const ColumnWrapper2 = styled.div`
   padding: 0 2rem;
   justify-content: space-between;
 
-  p, li {
+  p,
+  li {
     line-height: 1.5;
   }
 
@@ -185,6 +186,12 @@ const H2 = styled.h2`
   }
 `;
 
+const ButtonsWrapper = styled.div`
+  display: inline-flex;
+  justify-content: center;
+  gap: 1rem;
+`;
+
 const Advice = () => (
   <Layout>
     <ServicesWrapper>
@@ -201,10 +208,10 @@ const Advice = () => (
         <p>
           Se trata de una reunión presencial o por videollamada en la cual
           resuelvo todas tus dudas de él/los ambiente que quieras intervenir.
-          Este servicio puede serte útil si: Querés hacer vos misma/o un
-          cambio en tu casa pero no sabés qué te conviene hacer, qué colores
-          usar, si cambiar los muebles que tenés o simplemente hay que cambiar
-          la distribución, etc
+          Este servicio puede serte útil si: Querés hacer vos misma/o un cambio
+          en tu casa pero no sabés qué te conviene hacer, qué colores usar, si
+          cambiar los muebles que tenés o simplemente hay que cambiar la
+          distribución, etc
         </p>
         <br></br>
         <h3> Obtendrás una idea clara de: </h3>
@@ -258,7 +265,10 @@ const Advice = () => (
             <li> imágenes de referencia de los elementos a incorporar. </li>
           </LastSubUl>
         </Ul>
-        <Button to="/#contact-form">Contáctame</Button>
+        <ButtonsWrapper>
+          <Button to="/#contact-form">Contáctame</Button>
+          <Button to="/#services">Más servicios</Button>
+        </ButtonsWrapper>
       </ColumnWrapper2>
     </ServicesWrapper>
   </Layout>

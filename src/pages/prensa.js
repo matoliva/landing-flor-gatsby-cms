@@ -29,14 +29,23 @@ const IframesWrapper = styled.div`
 const Prensa = () => (
   <Layout>
     <SectionWrapper>
-      <Title> TENDIEZ </Title>
+      <Title> Webserie Sodimac | Interiorista seleccionada para el reality </Title>
+      <IframesWrapper>
+        <Iframe src="https://www.youtube.com/embed/W8VPVHi-CiM"></Iframe>
+        <Iframe src="https://www.youtube.com/embed/TmQLcmH06bA"></Iframe>
+      </IframesWrapper>
+      <hr></hr>
+
+      <Title>
+        TENDIEZ | Disertante - La comunicación entre el diseño y el comitente
+      </Title>
       <IframesWrapper>
         <Iframe src="https://www.youtube.com/embed/Dfa3JOM1DZo"></Iframe>
         <Iframe src="https://www.youtube.com/embed/n8k_jSVVUIg"></Iframe>
       </IframesWrapper>
       <hr></hr>
 
-      <Title> Alternativa TV </Title>
+      <Title> Alternativa TV | Columna de Interiorismo </Title>
       <IframesWrapper>
         <Iframe src="https://www.youtube.com/embed/iv0boPw2EbY?start=2"></Iframe>
         <Iframe src="https://www.youtube.com/embed/dU0Yce1Nf2o"></Iframe>

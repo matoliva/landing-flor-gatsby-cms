@@ -49,7 +49,6 @@ const ColumnWrapper = styled.div`
   margin-right: 1rem;
 
   .service-image {
-    
     @media (max-width: ${breakpoints.mobile}px) {
       height: 20rem;
     }
@@ -67,7 +66,8 @@ const ColumnWrapper2 = styled.div`
   padding: 0 2rem;
   justify-content: space-between;
 
-  p, li {
+  p,
+  li {
     line-height: 1.5;
   }
 
@@ -122,9 +122,13 @@ const H2 = styled.h2`
 
 const H3 = styled.h3`
   margin-bottom: 0;
-`
+`;
 
-
+const ButtonsWrapper = styled.div`
+  display: inline-flex;
+  justify-content: center;
+  gap: 1rem;
+`;
 
 const keyOnHand = () => (
   <Layout>
@@ -178,7 +182,10 @@ const keyOnHand = () => (
             disfrutar del gran cambio que se convirtió en realidad.
           </li>
         </Ul>
-        <Button to="/#contact-form">Contáctame</Button>
+        <ButtonsWrapper>
+          <Button to="/#contact-form">Contáctame</Button>
+          <Button to="/#services">Más servicios</Button>
+        </ButtonsWrapper>
       </ColumnWrapper2>
     </ServicesWrapper>
   </Layout>

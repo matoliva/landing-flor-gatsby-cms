@@ -162,7 +162,13 @@ const H3 = styled.h3`
 
 const P = styled.p`
   margin-bottom: 0;
-`
+`;
+
+const ButtonsWrapper = styled.div`
+  display: inline-flex;
+  justify-content: center;
+  gap: 1rem;
+`;
 
 const OnlineProject = () => (
   <Layout>
@@ -234,7 +240,10 @@ const OnlineProject = () => (
             propuesta final
           </li>
         </Ul>
-        <Button to="/#contact-form">Contáctame</Button>
+        <ButtonsWrapper>
+          <Button to="/#contact-form">Contáctame</Button>
+          <Button to="/#services">Más servicios</Button>
+        </ButtonsWrapper>
       </ColumnWrapper2>
     </ServicesWrapper>
   </Layout>
