@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import InstagramIcon from '../icons/instagram-brands.svg'
-import FacebookIcon from '../icons/facebook-square-brands.svg'
-import HouzzIcon from '../icons/houzz-brands.svg'
-import LinkedInIcon from '../icons/linkedin-brands.svg'
-import EnvelopIcon from '../icons/envelope-regular.svg'
+import InstagramIcon from "../icons/instagram-brands.svg";
+import FacebookIcon from "../icons/facebook-square-brands.svg";
+import HouzzIcon from "../icons/houzz-brands.svg";
+import LinkedInIcon from "../icons/linkedin-brands.svg";
+import EnvelopIcon from "../icons/envelope-regular.svg";
 
 const FooterWrapper = styled.footer`
   display: flex;
@@ -32,6 +32,11 @@ const FooterWrapper = styled.footer`
   }
 `;
 
+const A = styled.a`
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem !important;
+`;
 const SocialWrapper = styled.section`
   display: flex;
   justify-content: center;
@@ -47,39 +52,65 @@ const FooterInfo = styled.div`
 
 const TextSection = styled.div`
   padding: 0 10px;
-`
+`;
 
 const Footer = () => (
   <FooterWrapper>
     <TextSection>
       <h3> Sígueme </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet blandit mi. Vestibulum pellentesque ex risus</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet
+        blandit mi. Vestibulum pellentesque ex risus
+      </p>
       <SocialWrapper>
         <a
           href="https://www.instagram.com/florencianietointeriores"
-          target="_blank" rel="noreferrer"
+          target="_blank"
+          rel="noreferrer"
         >
           <InstagramIcon fill="#ccc" height={25} />
         </a>
-        <a href="https://www.facebook.com/florencianieto8/" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.facebook.com/florencianieto8/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FacebookIcon fill="#ccc" height={25} />
         </a>
         <a
           href="https://www.houzz.com/professionals/interior-designers-and-decorators/florencia-nieto-interiores-pfvwus-pf~1386239010"
-          target="_blank" rel="noreferrer"
+          target="_blank"
+          rel="noreferrer"
         >
           <HouzzIcon fill="#ccc" height={25} />
         </a>
-        <a href="https://www.linkedin.com/in/florencianieto/" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.linkedin.com/in/florencianieto/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <LinkedInIcon fill="#ccc" height={25} />
         </a>
-        <a href="mailto:contacto@florencianietointeriores.com" target="_blank" rel="noreferrer">
+        <a
+          href="mailto:contacto@florencianietointeriores.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           <EnvelopIcon fill="#ccc" height={25} />
         </a>
       </SocialWrapper>
     </TextSection>
     <FooterInfo>
-      <p>© 2021 - SouthPress</p>
+      <p>
+        © 2021 -
+        <A
+          href="mailto:southpress.io@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          SouthPress
+        </A>
+      </p>
     </FooterInfo>
   </FooterWrapper>
 );

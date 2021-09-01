@@ -10,23 +10,23 @@ module.exports = {
       },
       {
         label: 'Proyectos',
-        to: '/'
+        to: '/#proyects'
       },
       {
         label: 'Servicios',
-        to: '/'
+        to: '/#services'
       },
       {
         label: 'Prensa',
-        to: '/'
+        to: '/prensa'
       },
       {
         label: 'Contacto',
-        to: '/'
+        to: '/#contact-form'
       },
       {
-        label: 'Test',
-        to: '/test'
+        label: 'Sobre mi',
+        to: '/about'
       }
     ]
   },
@@ -98,6 +98,20 @@ module.exports = {
         rule: {
           include: /icons/ // See below to configure properly
         }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Florencia Nieto diseñadora de arquitectura interior`,
+        short_name: `Arquitectura de interior`,
+        description: `Esta web muestra el trabajo profesional realizado por la diseñadora Florencia Nieto`,
+        lang: `es`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/img/favicon2.png`, // This path is relative to the root of the site.
       }
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array

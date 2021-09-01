@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Hero from '../components/Hero'
 import ProjectsGrid from '../components/ProjectsGrid'
 import ContactForm from "../components/ContactForm";
+import { Services } from "../components/Services";
 
 const HomeWrapper = styled.section`
   display: flex;
@@ -21,6 +22,7 @@ const Home = ({ data }) => (
       <Hero />
     </HomeWrapper>
     <ProjectsGrid />
+    <Services />
     <ContactForm />
   </Layout>
 );

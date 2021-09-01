@@ -7,7 +7,6 @@ import { v4 as id } from 'uuid'
 const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
-  width: 100vw;
   padding: 10px 0;
   justify-content: center;
   align-items: center;
@@ -105,7 +104,7 @@ const ProjectsGrid = () => {
   })
 
   return (
-    <Wrapper>
+    <Wrapper id="proyects">
       <TitleWrapper>
         <Title>Proyectos</Title>
       </TitleWrapper>
