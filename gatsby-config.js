@@ -25,8 +25,8 @@ module.exports = {
         to: '/#contact-form'
       },
       {
-        label: 'Test',
-        to: '/test'
+        label: 'Sobre mi',
+        to: '/about'
       }
     ]
   },
