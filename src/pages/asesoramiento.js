@@ -258,7 +258,7 @@ const Advice = () => (
             <li> imágenes de referencia de los elementos a incorporar. </li>
           </LastSubUl>
         </Ul>
-        <Button to="/#contact-form">Contratame</Button>
+        <Button to="/#contact-form">Contáctame</Button>
       </ColumnWrapper2>
     </ServicesWrapper>
   </Layout>

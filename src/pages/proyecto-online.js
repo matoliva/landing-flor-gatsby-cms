@@ -234,7 +234,7 @@ const OnlineProject = () => (
             propuesta final
           </li>
         </Ul>
-        <Button to="/#contact-form">Contratame</Button>
+        <Button to="/#contact-form">Contáctame</Button>
       </ColumnWrapper2>
     </ServicesWrapper>
   </Layout>
