@@ -32,7 +32,6 @@ const ServicesWrapper = styled.section`
   display: flex;
   justify-content: space-between;
   padding: 2rem;
-  margin-top: 12rem;
   width: 100%;
   margin-bottom: 6rem;
 

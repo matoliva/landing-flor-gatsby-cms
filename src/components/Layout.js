@@ -41,6 +41,7 @@ const Main = styled.main`
   flex-direction: column;
   flex: 1;
   align-items: center;
+  margin-top: 150px;
 `
 
 const Layout = ({ children }) => (

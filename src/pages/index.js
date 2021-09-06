@@ -1,11 +1,11 @@
 import React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import Hero from '../components/Hero'
-import ProjectsGrid from '../components/ProjectsGrid'
+import Hero from "../components/Hero";
 import ContactForm from "../components/ContactForm";
 import { Services } from "../components/Services";
+import ProjectsSection from "../components/ProjectsSection";
 
 const HomeWrapper = styled.section`
   display: flex;
@@ -13,15 +13,16 @@ const HomeWrapper = styled.section`
   width: 100%;
   justify-content: center;
   align-items: center;
-`
+`;
+
+
 
 const Home = ({ data }) => (
   <Layout>
     <HomeWrapper>
-      {/* <h1>{data.site.siteMetadata.title}</h1> */}
       <Hero />
     </HomeWrapper>
-    <ProjectsGrid />
+    <ProjectsSection />
     <Services />
     <ContactForm />
   </Layout>
@@ -35,6 +36,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 export default Home;

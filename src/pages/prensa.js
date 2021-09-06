@@ -10,7 +10,6 @@ const Title = styled.h2``;
 const SectionWrapper = styled.section`
   box-sizing: border-box;
   padding: 2rem;
-  margin-top: 10rem;
   width: 100%;
   margin-bottom: 6rem;
 

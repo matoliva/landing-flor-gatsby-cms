@@ -7,31 +7,8 @@ import { v4 as id } from 'uuid'
 const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
-  padding: 10px 0;
   justify-content: center;
   align-items: center;
-`
-
-const Title = styled.h3`
-  color: ${props => props.theme.colors.secondary};
-  font-size: 30px;
-  font-weight: 100;
-  letter-spacing: 15px;
-  text-transform: uppercase;
-`
-
-const TitleWrapper = styled.div`
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media (max-width: 768px) {
-    height: 150px;
-    ${Title} {
-      font-size: 24px;
-    }
-  }
 `
 
 const Grid = styled.div`
@@ -105,9 +82,6 @@ const ProjectsGrid = () => {
 
   return (
     <Wrapper id="proyects">
-      <TitleWrapper>
-        <Title>Proyectos</Title>
-      </TitleWrapper>
       <Grid>
         {projects.map((project, index) => (
           <ImageWrapper to='/test' index={index} key={id()}>
